@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Ban, Book } from 'lucide-react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import Alert from "./components/Ui/Alert/Alert";
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div>
+      <Alert type = {"alert-danger"} icon = {<Ban size={20}/>} title = {"hola ezz"}>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+           Asperiores, voluptas doloremque et quidem veniam veritatis
+           tenetur sed nesciunt {""} <a href="">cum aspernatur</a> quae ullam vitae repellendus?
+          Quisquam natus excepturi doloribus delectus fugiat.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      </Alert>
+      <Alert type = {"alert-success"} icon = {<Book size={20}/>} title = {"hola Splendor"} description='keep going you have a few left' />
+      <Alert type = {"alert-blue"} icon = {<Book size={20}/>} title = {"hola Splendor"} description='keep going you have a few left' />
+      <Alert type = {"alert-yellow"} icon = {<Book size={20}/>} title = {"hola Splendor"} description='keep going you have a few left' />
+      <Alert type = {"alert-white"} icon = {<Book size={20}/>} title = {"hola Splendor"} description='keep going you have a few left' />
+    </div>
+  );
+};
 
-export default App
+export default App;

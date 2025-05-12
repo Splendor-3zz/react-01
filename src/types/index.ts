@@ -1,0 +1,1 @@
+export type AlertTypes = "alert-danger" | "alert-success"| "alert-blue"| "alert-yellow"| "alert-white";
